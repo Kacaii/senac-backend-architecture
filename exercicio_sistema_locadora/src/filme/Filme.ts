@@ -1,7 +1,22 @@
+type FilmeOpt = {
+  titulo: string;
+  ano: number;
+  genero: GeneroFilme;
+  valorLocacao: number;
+};
+
+type GeneroFilme =
+  | "terror"
+  | "romance"
+  | "faroeste"
+  | "ação"
+  | "drama"
+  | "comédia";
+
 export default class Filme {
   readonly titulo: string;
   readonly ano: number;
-  readonly genero: string;
+  readonly genero: GeneroFilme;
   readonly valorLocacao: number;
 
   constructor(opt: FilmeOpt) {
@@ -11,10 +26,3 @@ export default class Filme {
     this.valorLocacao = opt.valorLocacao;
   }
 }
-
-type FilmeOpt = {
-  titulo: string;
-  ano: number;
-  genero: string;
-  valorLocacao: number;
-};

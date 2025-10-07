@@ -1,5 +1,10 @@
 import Filme from "../filme/Filme.ts";
 
+type LocacaoOpts = {
+  data: Date;
+  listaFilmes: Array<Filme>;
+};
+
 export default class Locacao {
   readonly data: Date;
   readonly valorTotalAPagar: number;
@@ -7,11 +12,9 @@ export default class Locacao {
 
   constructor(opt: LocacaoOpts) {
     this.data = opt.data;
-    this.valorTotalAPagar = 0;
-    this.listaFilmes = [];
+    this.listaFilmes = opt.listaFilmes;
+    this.valorTotalAPagar = opt.listaFilmes.reduce((acc, b: Filme) => {
+      return acc + b.valorLocacao;
+    }, 0);
   }
 }
-
-type LocacaoOpts = {
-  data: Date;
-};

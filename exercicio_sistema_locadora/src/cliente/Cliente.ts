@@ -1,3 +1,10 @@
+type ClienteOpts = {
+  nome: string;
+  cpf: string;
+  endereco: string;
+  telefone: string;
+};
+
 export default class Cliente {
   readonly nome: string;
   readonly cpf: string;
@@ -11,10 +18,3 @@ export default class Cliente {
     this.telefone = opt.telefone;
   }
 }
-
-type ClienteOpts = {
-  nome: string;
-  cpf: string;
-  endereco: string;
-  telefone: string;
-};
