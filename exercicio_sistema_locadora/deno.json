@@ -1,0 +1,9 @@
+{
+  "tasks": {
+    "dev": "deno run --watch src/main.ts",
+    "build_windows": "deno compile --target x86_64-pc-windows-msvc --output bin/main.exe src/main.ts"
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@1"
+  }
+}
