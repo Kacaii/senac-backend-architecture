@@ -64,4 +64,8 @@ export default class Conta {
 
     return;
   }
+
+  visualizar_saldo(): number {
+    return this.saldoDevedor;
+  }
 }

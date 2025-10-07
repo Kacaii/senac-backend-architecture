@@ -1,4 +1,3 @@
-import { green } from "jsr:@std/internal@^1.0.12/styles";
 import { Cliente, Conta, Filme } from "./locadora/index.ts";
 
 function main() {
@@ -174,7 +173,7 @@ function main() {
   console.log(eloi.extratoHistorico());
 
   console.log("-".repeat(Deno.consoleSize().columns));
-  prompt(green("  > ENTER"));
+  prompt("\x1b[32m" + "  > ENTER" + "\x1b[39m");
 }
 
 if (import.meta.main) {
